@@ -16,7 +16,7 @@ namespace PaymentProcessing
 
         public void Charge(decimal amount, IPaymentMethod paymentMethod)
         {
-            this.logger.Log($"Charging {amount:F2} using paymentMethod={paymentMethod.GetType().Name} and apikey={paymentServiceConfiguration.ApiKey}");
+            this.logger.Log($"Charging {amount:F2} using paymentMethod={paymentMethod.GetType().Name} and apikey={this.paymentServiceConfiguration.ApiKey}");
         }
     }
 }

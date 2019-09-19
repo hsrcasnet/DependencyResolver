@@ -5,8 +5,8 @@ using System.Linq;
 namespace DependencyResolver
 {
     /// <summary>
-    /// Simplest possible dependency injection container.
-    /// Original source: http://www.pashov.net/code/dependency-injection-hood/
+    ///     Simplest possible dependency injection container.
+    ///     Original source: http://www.pashov.net/code/dependency-injection-hood/
     /// </summary>
     public class Resolver
     {
@@ -25,12 +25,11 @@ namespace DependencyResolver
             try
             {
                 //check if we have a configured map  
-                resolvedType = dependencyMap[typeToResolve];
+                resolvedType = this.dependencyMap[typeToResolve];
             }
             catch
             {
                 throw new Exception($"Could not resolve {typeToResolve.FullName}");
-
             }
 
             //get the constructor and then the parameters  
