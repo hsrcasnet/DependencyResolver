@@ -18,7 +18,8 @@ namespace PaymentProcessing.Console
 
             // Resolve dependencies
             var paymentService = resolver.Resolve<IPaymentService>();
-            paymentService.Charge(99m, new MasterCard());
+            paymentService.Charge(88m, new MasterCard());
+            paymentService.Charge(99m, new Visa());
 
             System.Console.ReadLine();
         }

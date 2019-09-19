@@ -47,6 +47,7 @@
     <Compile Include="PaymentMethods\IPaymentMethod.cs" />
     <Compile Include="IPaymentService.cs" />
     <Compile Include="IPaymentServiceConfiguration.cs" />
+    <Compile Include="PaymentMethods\Visa.cs" />
     <Compile Include="PaymentMethods\MasterCard.cs" />
     <Compile Include="PaymentService.cs" />
     <Compile Include="PaymentServiceConfiguration.cs" />
