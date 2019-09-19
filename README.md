@@ -1,11 +1,11 @@
 # DependencyResolver
-A simple dependency injection framework to demonstrate the core functionality of a dependency injection framework such as Autofac, Unity, Ninject.
+A simple dependency injection framework to demonstrate the core functionality such as registration and resolving of dependency trees.
 
-### How it use the DependencyResolver
+### How it use DependencyResolver
 The DependencyResolver provides two basic methods: Register and Resolve. Register allows to map abstractions to implementations at bootstrap time of an application. These registrations are sometimes also called services, service mappings or dependencies.
 Later, at runtime of the application, the Resolve method is used to create instances for the registered services.
 
-```
+```C#
 // Create a new dependency injection container
 var resolver = new Resolver();
 
@@ -19,15 +19,21 @@ var paymentService = resolver.Resolve<IPaymentService>();
 paymentService.Charge(99m, new MasterCard());
 ```
 
+### Disclaimer
+Do not use DependencyResolver in production code!<br/>Use one of the well-known DI frameworks instead: Autofac, Unity, Ninject.
+
 ### Links
-Autofac
+Original Source & Credits<br/>
+http://www.pashov.net/code/dependency-injection-hood/
+
+Autofac<br/>
 https://autofac.org/
 
-Unity Container
+Unity Container<br/>
 https://github.com/unitycontainer
 
-Ninject
+Ninject<br/>
 http://www.ninject.org/
 
-Original Source & Credits
-http://www.pashov.net/code/dependency-injection-hood/
+Dependency Injection in ASP.NET Core<br/>
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.2
