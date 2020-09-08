@@ -1,8 +1,10 @@
 ﻿using DependencyResolver;
+using PaymentProcessing;
 using PaymentProcessing.Logging;
 using PaymentProcessing.PaymentMethods;
+using System;
 
-namespace PaymentProcessing.Console
+namespace PaymentProcessor.ConsoleApp
 {
     class Program
     {
@@ -21,7 +23,7 @@ namespace PaymentProcessing.Console
             paymentService.Charge(88m, new MasterCard());
             paymentService.Charge(99m, new Visa());
 
-            System.Console.ReadLine();
+            Console.ReadLine();
         }
     }
 }

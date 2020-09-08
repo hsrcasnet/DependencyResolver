@@ -2,5 +2,6 @@
 {
     public class Visa : IPaymentMethod
     {
+        public string Name => "VISA";
     }
 }

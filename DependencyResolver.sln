@@ -3,16 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyResolver", "DependencyResolver\DependencyResolver.csproj", "{B675DD80-4E6B-4275-BC0F-79C857707874}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentProcessing", "PaymentProcessing\PaymentProcessing.csproj", "{208C992A-0311-41BA-8208-AEA25AAA39FB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentProcessing.Console", "PaymentProcessing.Console\PaymentProcessing.Console.csproj", "{18AEBC62-D729-466D-A05A-1F9AAB116D90}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CC234AB9-B0AA-43AE-AFE8-4385FCFB3563}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{B9D343D4-EFFC-4293-83A0-C19F2AE13AB1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PaymentProcessing", "PaymentProcessing", "{D507632C-DEB0-47EC-80AD-621E79DDE681}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoffeeMaking", "CoffeeMaking", "{1FFB5558-4C79-4D66-A35B-8D76920BD8E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyResolver", "DependencyResolver\DependencyResolver.csproj", "{D0508680-CD84-4063-AD23-9CC595477738}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentProcessor", "Samples\PaymentProcessing\PaymentProcessor\PaymentProcessor.csproj", "{E6C13646-F341-4190-9725-8ED5EDFA970B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentProcessor.ConsoleApp", "Samples\PaymentProcessing\PaymentProcessor.ConsoleApp\PaymentProcessor.ConsoleApp.csproj", "{9C019D07-1174-4DEB-856D-E6873970B1F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,21 +26,27 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B675DD80-4E6B-4275-BC0F-79C857707874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B675DD80-4E6B-4275-BC0F-79C857707874}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B675DD80-4E6B-4275-BC0F-79C857707874}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B675DD80-4E6B-4275-BC0F-79C857707874}.Release|Any CPU.Build.0 = Release|Any CPU
-		{208C992A-0311-41BA-8208-AEA25AAA39FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{208C992A-0311-41BA-8208-AEA25AAA39FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{208C992A-0311-41BA-8208-AEA25AAA39FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{208C992A-0311-41BA-8208-AEA25AAA39FB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{18AEBC62-D729-466D-A05A-1F9AAB116D90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18AEBC62-D729-466D-A05A-1F9AAB116D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18AEBC62-D729-466D-A05A-1F9AAB116D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18AEBC62-D729-466D-A05A-1F9AAB116D90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0508680-CD84-4063-AD23-9CC595477738}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0508680-CD84-4063-AD23-9CC595477738}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0508680-CD84-4063-AD23-9CC595477738}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0508680-CD84-4063-AD23-9CC595477738}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6C13646-F341-4190-9725-8ED5EDFA970B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6C13646-F341-4190-9725-8ED5EDFA970B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6C13646-F341-4190-9725-8ED5EDFA970B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6C13646-F341-4190-9725-8ED5EDFA970B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C019D07-1174-4DEB-856D-E6873970B1F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C019D07-1174-4DEB-856D-E6873970B1F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C019D07-1174-4DEB-856D-E6873970B1F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C019D07-1174-4DEB-856D-E6873970B1F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D507632C-DEB0-47EC-80AD-621E79DDE681} = {B9D343D4-EFFC-4293-83A0-C19F2AE13AB1}
+		{1FFB5558-4C79-4D66-A35B-8D76920BD8E9} = {B9D343D4-EFFC-4293-83A0-C19F2AE13AB1}
+		{E6C13646-F341-4190-9725-8ED5EDFA970B} = {D507632C-DEB0-47EC-80AD-621E79DDE681}
+		{9C019D07-1174-4DEB-856D-E6873970B1F7} = {D507632C-DEB0-47EC-80AD-621E79DDE681}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {05BCC261-4B42-4ECD-919A-31449BE16113}
