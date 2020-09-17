@@ -1,6 +1,5 @@
 ﻿using CoffeeMaker.Abstractions;
 using System;
-using System.Threading.Tasks;
 
 namespace CoffeeMaker.Components
 {

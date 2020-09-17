@@ -26,9 +26,9 @@ namespace CoffeeMaker
 
         public async Task<ICoffee> GetEspresso()
         {
-            await grinder.Grind(TimeSpan.FromMilliseconds(4400), 2);
+            await this.grinder.Grind(TimeSpan.FromMilliseconds(4400), 2);
 
-            var totalVolume = await pump.Pump(this.tank, this.heater, TimeSpan.FromSeconds(24));
+            var totalVolume = await this.pump.Pump(this.tank, this.heater, TimeSpan.FromSeconds(24));
 
             return new Espresso(totalVolume);
         }

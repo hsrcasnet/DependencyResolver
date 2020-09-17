@@ -21,7 +21,7 @@ namespace DependencyResolver
 
         private object Resolve(Type typeToResolve)
         {
-            Type resolvedType = null;
+            Type resolvedType;
             try
             {
                 //check if we have a configured map  
