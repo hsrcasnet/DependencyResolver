@@ -10,13 +10,27 @@ namespace DependencyResolver
     /// </summary>
     public class Resolver
     {
-        //store for dependency maps  
+        // Map interface types to implementation types in a simple dictionary
         private readonly Dictionary<Type, Type> dependencyMap = new Dictionary<Type, Type>();
 
-        //this method calls the next one - we use this one publicly just because its syntax is cooler  
-        public T Resolve<T>()
+        /// <summary>
+        /// Registers type mappings from <typeparamref name="TInterface"/> to <typeparamref name="TImplementation"/>.
+        /// </summary>
+        /// <typeparam name="TInterface">The interface type which is later resolved/injected.</typeparam>
+        /// <typeparam name="TImplementation">The implementation type to be constructed when a <typeparamref name="TImplementation"/> is resolved.</typeparam>
+        public void Register<TInterface, TImplementation>() where TImplementation : TInterface
         {
-            return (T)this.Resolve(typeof(T));
+            this.dependencyMap.Add(typeof(TInterface), typeof(TImplementation));
+        }
+
+        /// <summary>
+        /// Resolves the implementation of the given interface type <typeparamref name="TInterface"/>.
+        /// </summary>
+        /// <typeparam name="TInterface">The interface type.</typeparam>
+        /// <returns>The implementation of <typeparamref name="TInterface"/>.</returns>
+        public TInterface Resolve<TInterface>()
+        {
+            return (TInterface)this.Resolve(typeof(TInterface));
         }
 
         private object Resolve(Type typeToResolve)
@@ -24,7 +38,7 @@ namespace DependencyResolver
             Type resolvedType;
             try
             {
-                //check if we have a configured map  
+                // Check if we have a configured type mapping  
                 resolvedType = this.dependencyMap[typeToResolve];
             }
             catch
@@ -32,33 +46,31 @@ namespace DependencyResolver
                 throw new Exception($"Could not resolve {typeToResolve.FullName}");
             }
 
-            //get the constructor and then the parameters  
+            // Get the constructor and then the parameters  
             var firstConstructor = resolvedType.GetConstructors().First();
             var constructorParameters = firstConstructor.GetParameters();
 
             // In the case of parameterless constructor  
             if (!constructorParameters.Any())
             {
-                //return an instance of the resolved type  
-                return Activator.CreateInstance(resolvedType);
+                // Return an instance of the resolved type  
+                var instance = Activator.CreateInstance(resolvedType);
+                return instance;
             }
-
-            // In case the typeToResolve has further dependencies
-            var dependencies = new List<object>();
-            foreach (var constructorParameter in constructorParameters)
+            else
             {
-                // Recursively resolve all dependencies
-                var dependency = this.Resolve(constructorParameter.ParameterType);
-                dependencies.Add(dependency);
+                // In case the typeToResolve has further dependencies
+                var dependencies = new List<object>();
+                foreach (var constructorParameter in constructorParameters)
+                {
+                    // Recursively resolve all dependencies
+                    var dependency = this.Resolve(constructorParameter.ParameterType);
+                    dependencies.Add(dependency);
+                }
+
+                var instance = firstConstructor.Invoke(dependencies.ToArray());
+                return instance;
             }
-
-            var instance = firstConstructor.Invoke(dependencies.ToArray());
-            return instance;
-        }
-
-        public void Register<TInterface, TImplementation>() where TImplementation : TInterface
-        {
-            this.dependencyMap.Add(typeof(TInterface), typeof(TImplementation));
         }
     }
 }
