@@ -18,7 +18,7 @@ namespace CoffeeMaker.Tests
             var tankMock = new Mock<ITank>();
 
             var pumpMock = new Mock<IPump>();
-            pumpMock.Setup(p => p.Pump(It.IsAny<ITank>(), It.IsAny<IHeater>(), It.IsAny<TimeSpan>()))
+            pumpMock.Setup(p => p.Pump(It.IsAny<ITank>(), It.IsAny<TimeSpan>()))
                 .ReturnsAsync(100m);
 
             var coffeeMachine = new CoffeeMachine(grinderMock.Object, heaterMock.Object, pumpMock.Object, tankMock.Object);

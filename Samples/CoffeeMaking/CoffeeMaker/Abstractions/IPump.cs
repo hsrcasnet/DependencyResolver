@@ -7,6 +7,6 @@ namespace CoffeeMaker.Abstractions
     {
         decimal FlowRate { get; }
 
-        Task<decimal> Pump(ITank tank, IHeater heater, TimeSpan duration);
+        Task<decimal> Pump(ITank tank, TimeSpan duration);
     }
 }

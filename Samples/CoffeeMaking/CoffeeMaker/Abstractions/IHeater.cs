@@ -4,6 +4,6 @@ namespace CoffeeMaker
 {
     public interface IHeater
     {
-        Task Heat(decimal liquid, float temperature);
+        Task Heat(decimal volume, float temperature);
     }
 }

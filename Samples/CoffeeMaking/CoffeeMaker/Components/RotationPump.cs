@@ -8,7 +8,7 @@ namespace CoffeeMaker.Components
     {
         public decimal FlowRate => 10m;
 
-        public async Task<decimal> Pump(ITank tank, IHeater heater, TimeSpan duration)
+        public async Task<decimal> Pump(ITank tank, TimeSpan duration)
         {
             Console.WriteLine($"Pumping water for {duration}...");
 

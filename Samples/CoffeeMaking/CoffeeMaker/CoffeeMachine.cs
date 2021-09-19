@@ -6,6 +6,8 @@ namespace CoffeeMaker
 {
     public class CoffeeMachine : ICoffeeMachine
     {
+        private const float temperature = 94f;
+
         private readonly IPump pump;
         private readonly ITank tank;
         private readonly IHeater heater;
@@ -28,7 +30,9 @@ namespace CoffeeMaker
         {
             await this.grinder.Grind(TimeSpan.FromMilliseconds(4400), 2);
 
-            var totalVolume = await this.pump.Pump(this.tank, this.heater, TimeSpan.FromSeconds(24));
+            var totalVolume = await this.pump.Pump(this.tank, TimeSpan.FromSeconds(24));
+
+            await this.heater.Heat(totalVolume, temperature);
 
             return new Espresso(totalVolume);
         }
