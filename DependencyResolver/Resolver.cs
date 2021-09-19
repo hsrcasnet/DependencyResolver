@@ -56,9 +56,9 @@ namespace DependencyResolver
             return instance;
         }
 
-        public void Register<T1, T2>()
+        public void Register<TInterface, TImplementation>() where TImplementation : TInterface
         {
-            this.dependencyMap.Add(typeof(T1), typeof(T2));
+            this.dependencyMap.Add(typeof(TInterface), typeof(TImplementation));
         }
     }
 }
