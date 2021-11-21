@@ -1,14 +1,14 @@
-﻿using CoffeeMaker.Abstractions;
+﻿using System;
+using System.Threading.Tasks;
+using CoffeeMaker.Abstractions;
 using CoffeeMaker.Components;
 using DependencyResolver;
-using System;
-using System.Threading.Tasks;
 
 namespace CoffeeMaker.ConsoleApp
 {
-    class Program
+    internal class Program
     {
-        static async Task Main(string[] args)
+        private static async Task Main(string[] args)
         {
             // Create a new Dependency Injection Container
             var resolver = new Resolver();
@@ -25,7 +25,7 @@ namespace CoffeeMaker.ConsoleApp
             coffeeMachine.FillWater(300);
 
             var numberOfEspressos = 10;
-            for (int i = 1; i <= numberOfEspressos; i++)
+            for (var i = 1; i <= numberOfEspressos; i++)
             {
                 Console.WriteLine($"Starting espresso #{i}...");
 

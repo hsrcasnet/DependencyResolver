@@ -1,6 +1,6 @@
+using System;
 using CoffeeMaker.Components;
 using FluentAssertions;
-using System;
 using Xunit;
 
 namespace CoffeeMaker.Tests

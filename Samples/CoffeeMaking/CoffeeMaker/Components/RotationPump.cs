@@ -1,6 +1,6 @@
-﻿using CoffeeMaker.Abstractions;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using CoffeeMaker.Abstractions;
 
 namespace CoffeeMaker.Components
 {
@@ -12,8 +12,8 @@ namespace CoffeeMaker.Components
         {
             Console.WriteLine($"Pumping water for {duration}...");
 
-            decimal drainedVolume = 0m;
-            for (int i = 0; i < duration.TotalSeconds; i++)
+            var drainedVolume = 0m;
+            for (var i = 0; i < duration.TotalSeconds; i++)
             {
                 await Task.Delay(1000);
                 drainedVolume += tank.Drain(this.FlowRate);

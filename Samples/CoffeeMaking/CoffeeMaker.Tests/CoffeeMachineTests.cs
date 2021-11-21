@@ -1,8 +1,8 @@
+using System;
+using System.Threading.Tasks;
 using CoffeeMaker.Abstractions;
 using FluentAssertions;
 using Moq;
-using System;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace CoffeeMaker.Tests

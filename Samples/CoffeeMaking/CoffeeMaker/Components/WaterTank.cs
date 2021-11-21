@@ -1,5 +1,5 @@
-﻿using CoffeeMaker.Abstractions;
-using System;
+﻿using System;
+using CoffeeMaker.Abstractions;
 
 namespace CoffeeMaker.Components
 {

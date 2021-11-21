@@ -1,5 +1,5 @@
-﻿using MovieSample.Model;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using MovieSample.Model;
 
 namespace MovieSample
 {

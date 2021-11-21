@@ -1,6 +1,6 @@
-﻿using CoffeeMaker.Abstractions;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using CoffeeMaker.Abstractions;
 
 namespace CoffeeMaker
 {

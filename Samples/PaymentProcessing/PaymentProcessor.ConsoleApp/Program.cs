@@ -1,14 +1,14 @@
-﻿using DependencyResolver;
+﻿using System;
+using DependencyResolver;
 using PaymentProcessing;
 using PaymentProcessing.Logging;
 using PaymentProcessing.PaymentMethods;
-using System;
 
 namespace PaymentProcessor.ConsoleApp
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             // Create a new Dependency Injection Container
             var resolver = new Resolver();
