@@ -328,3 +328,8 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+# Export folders
+/App_Data/pain.002
+/App_Data/pain.001
+/Tests/InvoiceScanner.Api.Tests/coverage.cobertura.xml

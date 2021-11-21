@@ -5,6 +5,7 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CC234AB9-B0AA-43AE-AFE8-4385FCFB3563}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -14,17 +15,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PaymentProcessing", "Paymen
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoffeeMaking", "CoffeeMaking", "{1FFB5558-4C79-4D66-A35B-8D76920BD8E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyResolver", "DependencyResolver\DependencyResolver.csproj", "{D0508680-CD84-4063-AD23-9CC595477738}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyResolver", "DependencyResolver\DependencyResolver.csproj", "{D0508680-CD84-4063-AD23-9CC595477738}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentProcessor", "Samples\PaymentProcessing\PaymentProcessor\PaymentProcessor.csproj", "{E6C13646-F341-4190-9725-8ED5EDFA970B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentProcessor", "Samples\PaymentProcessing\PaymentProcessor\PaymentProcessor.csproj", "{E6C13646-F341-4190-9725-8ED5EDFA970B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentProcessor.ConsoleApp", "Samples\PaymentProcessing\PaymentProcessor.ConsoleApp\PaymentProcessor.ConsoleApp.csproj", "{9C019D07-1174-4DEB-856D-E6873970B1F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentProcessor.ConsoleApp", "Samples\PaymentProcessing\PaymentProcessor.ConsoleApp\PaymentProcessor.ConsoleApp.csproj", "{9C019D07-1174-4DEB-856D-E6873970B1F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeMaker", "Samples\CoffeeMaking\CoffeeMaker\CoffeeMaker.csproj", "{C6F43348-77F7-4313-B87D-28E28F42FC21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeMaker", "Samples\CoffeeMaking\CoffeeMaker\CoffeeMaker.csproj", "{C6F43348-77F7-4313-B87D-28E28F42FC21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeMaker.Tests", "Samples\CoffeeMaking\CoffeeMaker.Tests\CoffeeMaker.Tests.csproj", "{E3658122-6F72-4297-BD31-307499BF21AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeMaker.Tests", "Samples\CoffeeMaking\CoffeeMaker.Tests\CoffeeMaker.Tests.csproj", "{E3658122-6F72-4297-BD31-307499BF21AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeMaker.ConsoleApp", "Samples\CoffeeMaking\CoffeeMaker.ConsoleApp\CoffeeMaker.ConsoleApp.csproj", "{84915F7A-D92C-4382-A7AC-920C6AD8B657}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeMaker.ConsoleApp", "Samples\CoffeeMaking\CoffeeMaker.ConsoleApp\CoffeeMaker.ConsoleApp.csproj", "{84915F7A-D92C-4382-A7AC-920C6AD8B657}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Movies", "Movies", "{F9910401-0E39-41A6-8A04-C1C48E100D4B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieSample", "Samples\Movies\MovieSample\MovieSample.csproj", "{A5353CF4-E3B5-4F11-8283-A73CB0D4E83C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieSample.ConsoleApp", "Samples\Movies\MovieSample.ConsoleApp\MovieSample.ConsoleApp.csproj", "{0DEF7D44-66E1-4388-8D0C-3312A63381D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +63,14 @@ Global
 		{84915F7A-D92C-4382-A7AC-920C6AD8B657}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84915F7A-D92C-4382-A7AC-920C6AD8B657}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84915F7A-D92C-4382-A7AC-920C6AD8B657}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5353CF4-E3B5-4F11-8283-A73CB0D4E83C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5353CF4-E3B5-4F11-8283-A73CB0D4E83C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5353CF4-E3B5-4F11-8283-A73CB0D4E83C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5353CF4-E3B5-4F11-8283-A73CB0D4E83C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DEF7D44-66E1-4388-8D0C-3312A63381D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DEF7D44-66E1-4388-8D0C-3312A63381D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DEF7D44-66E1-4388-8D0C-3312A63381D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DEF7D44-66E1-4388-8D0C-3312A63381D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +83,9 @@ Global
 		{C6F43348-77F7-4313-B87D-28E28F42FC21} = {1FFB5558-4C79-4D66-A35B-8D76920BD8E9}
 		{E3658122-6F72-4297-BD31-307499BF21AB} = {1FFB5558-4C79-4D66-A35B-8D76920BD8E9}
 		{84915F7A-D92C-4382-A7AC-920C6AD8B657} = {1FFB5558-4C79-4D66-A35B-8D76920BD8E9}
+		{F9910401-0E39-41A6-8A04-C1C48E100D4B} = {B9D343D4-EFFC-4293-83A0-C19F2AE13AB1}
+		{A5353CF4-E3B5-4F11-8283-A73CB0D4E83C} = {F9910401-0E39-41A6-8A04-C1C48E100D4B}
+		{0DEF7D44-66E1-4388-8D0C-3312A63381D9} = {F9910401-0E39-41A6-8A04-C1C48E100D4B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {05BCC261-4B42-4ECD-919A-31449BE16113}

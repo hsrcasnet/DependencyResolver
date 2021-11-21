@@ -1,0 +1,7 @@
+﻿namespace MovieSample
+{
+    public interface ILogger
+    {
+        void Log(string message);
+    }
+}
