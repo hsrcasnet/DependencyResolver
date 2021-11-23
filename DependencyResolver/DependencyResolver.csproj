@@ -26,7 +26,7 @@
 		<OutputType>Library</OutputType>
 		<StartupObject />
 		<Company>superdev GmbH</Company>
-		<Product>DependencyResolver</Product>
+		<Product>DependencyResolver.NET</Product>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<PackageReleaseNotes>1.0.0
 - Initial release
