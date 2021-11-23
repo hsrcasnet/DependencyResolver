@@ -9,7 +9,7 @@
 		<TargetFrameworks>net45;netstandard2.0;netstandard2.1</TargetFrameworks>
 		<AssemblyName>DependencyResolver</AssemblyName>
 		<RootNamespace>DependencyResolver</RootNamespace>
-		<PackageId>DependencyResolver</PackageId>
+		<PackageId>DependencyResolver.NET</PackageId>
 		<PackageTags>DependencyResolver;IoC;Container;Inversion-of-Control;DI;Dependency-Injection;Service-Provider</PackageTags>
 		<PackageIconUrl>https://raw.githubusercontent.com/hsrcasnet/DependencyResolver/master/DependencyResolver.png</PackageIconUrl>
 		<PackageProjectUrl>https://github.com/hsrcasnet/DependencyResolver</PackageProjectUrl>

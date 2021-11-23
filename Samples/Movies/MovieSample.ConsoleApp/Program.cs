@@ -2,7 +2,7 @@
 using System.Linq;
 using DependencyResolver;
 using MovieSample;
-using PaymentProcessing.Logging;
+using MovieSample.Logging;
 
 namespace PaymentProcessor.ConsoleApp
 {

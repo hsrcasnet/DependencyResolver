@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics;
-using MovieSample;
 
-namespace PaymentProcessing.Logging
+namespace MovieSample.Logging
 {
     public class DebugLogger : ILogger
     {
