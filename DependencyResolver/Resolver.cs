@@ -33,6 +33,11 @@ namespace DependencyResolver
             return (TInterface)this.Resolve(typeof(TInterface));
         }
 
+        /// <summary>
+        /// Resolves the implementation of the given interface type <paramref name="typeToResolve"/>.
+        /// </summary>
+        /// <param name="typeToResolve"></param>
+        /// <returns></returns>
         public object Resolve(Type typeToResolve)
         {
             Type resolvedType;
