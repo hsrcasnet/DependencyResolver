@@ -33,7 +33,7 @@ namespace DependencyResolver
             return (TInterface)this.Resolve(typeof(TInterface));
         }
 
-        private object Resolve(Type typeToResolve)
+        public object Resolve(Type typeToResolve)
         {
             Type resolvedType;
             try
