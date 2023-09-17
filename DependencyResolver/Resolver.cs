@@ -5,9 +5,11 @@ using System.Linq;
 namespace DependencyResolver
 {
     /// <summary>
-    ///     Simplest possible dependency injection container.
-    ///     Original source: http://www.pashov.net/code/dependency-injection-hood/
+    /// Implementation of a very simple dependency injection container.
     /// </summary>
+    /// <remarks>
+    /// Original source: http://www.pashov.net/code/dependency-injection-hood/
+    /// </remarks>
     public class Resolver
     {
         // Map interface types to implementation types in a simple dictionary
