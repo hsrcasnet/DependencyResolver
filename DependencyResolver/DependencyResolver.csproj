@@ -10,40 +10,34 @@
 		<AssemblyName>DependencyResolver</AssemblyName>
 		<RootNamespace>DependencyResolver</RootNamespace>
 		<PackageId>DependencyResolver.NET</PackageId>
-		<PackageTags>DependencyResolver;IoC;Container;Inversion-of-Control;DI;Dependency-Injection;Service-Provider</PackageTags>
-		<PackageIconUrl>https://raw.githubusercontent.com/hsrcasnet/DependencyResolver/master/DependencyResolver.png</PackageIconUrl>
+		<PackageTags>DependencyResolver;IoC;Container;Inversion-of-Control;DI;Dependency-Injection;DependencyInjection;Service-Provider;</PackageTags>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageProjectUrl>https://github.com/hsrcasnet/DependencyResolver</PackageProjectUrl>
-		<PackageLicenseUrl>http://opensource.org/licenses/Apache-2.0</PackageLicenseUrl>
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/hsrcasnet/DependencyResolver</RepositoryUrl>
-		<RuntimeIdentifiers>win10-x64</RuntimeIdentifiers>
 		<SignAssembly>True</SignAssembly>
 		<LangVersion>latest</LangVersion>
-	</PropertyGroup>
-
-	<PropertyGroup>
-		<ApplicationIcon />
 		<OutputType>Library</OutputType>
-		<StartupObject />
 		<Company>superdev GmbH</Company>
 		<Product>DependencyResolver</Product>
+    <Copyright>Copyright $([System.DateTime]::Now.ToString(`yyyy`)) © Thomas Galliker</Copyright>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<PackageReleaseNotes>1.0.0
 - Initial release
 		</PackageReleaseNotes>
-		<Copyright>Copyright 2022</Copyright>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 
 	<ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
 		<Reference Include="System" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <None Include="..\README.md">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" Pack="True" PackagePath="\" />
+    <None Include="..\LICENSE" Pack="True" PackagePath="\" />
+    <None Include="..\Images\logo.png" Pack="True" PackagePath="\" />
+  </ItemGroup>
 
 </Project>
